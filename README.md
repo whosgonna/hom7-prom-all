@@ -1,6 +1,7 @@
 <img src="https://user-images.githubusercontent.com/1423657/55069501-8348c400-5084-11e9-9931-fefe0f9874a7.png" width=200/>
 
 # HOMER + Grafana + Prometheus + Loki
+Based off of https://github.com/sipcapture/homer7-docker
 
 <img src="https://i.imgur.com/Atdig3X.gif" width=500>
 <img src="https://user-images.githubusercontent.com/1423657/50036716-4bed6480-000b-11e9-98bd-81a78cd54251.png" width=500>
