@@ -1,0 +1,7 @@
+FROM alpine
+
+RUN apk add --no-cache sipp sngrep
+
+COPY my_uac.xml /my_uac.xml
+
+ENTRYPOINT ["sipp", "-sf", "/my_uac.xml", "-l", "1", "-rp", "10s", "-r", "1"] 

@@ -1,0 +1,43 @@
+## CNAM_URL is required:
+!!define CNAM_URL "https://uat.webgateway.callerid.neustar.biz/ecid/v1/identity"
+## Above is the Test URL.  Here's the production URL:
+# !!define CNAM_URL "https://webgateway.callerid.neustar.biz/ecid/v1/identity"
+
+## CNAM_API_KEY is technically optional, but is generally expected:
+!!define CNAM_API_KEY "ABCDEFG1234567890"
+
+
+
+#### OPTIONS that are (strongly) recommnded for non-containerized instances: ####
+
+## In a non-containerized environment, it is recommended to set the listners,
+## particularily if the server is multi-homed, and you don't want Kamailio 
+## listening on every interface.
+#  listen=udp:11.22.33.44:5060
+
+## These are not in the main config, because we don't need/want it for Docker.
+debug=2
+log_facility=LOG_LOCAL0
+
+
+
+
+#########  OPTIONAL, configs ########
+
+## Set the number of http workers if needed.  If it is not set, then the 
+## http_async_client will use it's default value of 1
+# !!define HTTP_ASYNC_CLIENT_WORKERS 4
+
+
+## How frequently to get a sample of the http response times.  This is set to
+## 100 in the script, but can be overridden here if desired.
+# !!define STATS_SAMPLE_SIZE 200
+
+## Set the defautl address list to be used by by the permissions module.  This
+## must be a file location, and the file must match the address list format as
+## documented by Kamailio's permissions module.  If the value is not defined, 
+## then the permissions module is not loaded, and Kamailio will not do any 
+## allow listing.  Do not set this if you don't have a proper address file!
+# !!define ADDRESS_LIST "/usr/etc/kamailio/address.list"
+
+

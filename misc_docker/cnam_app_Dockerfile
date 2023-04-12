@@ -1,0 +1,11 @@
+FROM alpine
+
+RUN apk update \
+    && apk upgrade \
+    && apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main kamailio \
+    && apk add --no-cache sngrep
+
+COPY kam_cnam_app.cfg /etc/kamailio/kamailio.cfg
+
+ENTRYPOINT kamailio -ddDDeE
+

@@ -1,0 +1,10 @@
+#
+# dispatcher destination sets (groups)
+#
+
+# line format
+# setid(int) destination(sip uri) flags(int,opt) priority(int,opt) attributes(str,opt)
+1 sip:cnam_app1:5060 8 0 duid=cnam_app1
+1 sip:cnam_app2:5060 8 0 duid=cnam_app2
+
+
